@@ -1,0 +1,41 @@
+.bt {
+  padding: 10px 20px;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 46px;
+}
+.bt:hover {
+  text-decoration: none;
+}
+.bt-rounded {
+  border-radius: 25px;
+  font-weight: 100;
+}
+.bt-primary {
+  background: none;
+  color: lightgrey;
+  opacity: 1;
+  opacity: 0;
+  border: 1px solid lightgrey;
+}
+
+.bt-primary:hover {
+  color: $black;
+  background: white;
+}
+.bt-kyo {
+  background: none;
+  border-color: white;
+  color: white;
+  z-index: 10000;
+  position: relative;
+  top: 17px;
+  left: 14px;
+}
+.input--filled ~ .bt-primary {
+  opacity: 1;
+  position: relative;
+  top: 4px;
+}

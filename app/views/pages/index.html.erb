@@ -1,0 +1,163 @@
+<% languages = %w(bootstrap html5 github sass ruby css3) %>
+
+
+<div class="full-height">
+
+  <div class='infos fadeInHome'>
+    <div class="catcher">
+      <div id="logo">
+        <%= render 'pages/moon' %>
+      </div>
+
+      <p>propulsé par
+        <a href='http://www.lewagon.org' target="_blank">
+          <%= render 'pages/logo' %>
+        </a>
+      </p>
+      <h1>
+        Apprenez à coder, en ligne !
+      </h1>
+
+
+      <%= form_tag(subscribe_path, id: "form-top", remote: true) do %>
+        <span class="input input--hoshi">
+          <%= email_field_tag :email, nil, class: "input__field input__field--hoshi", id: "input-4", autocomplete: :off %>
+          <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+            <span class="input__label-content input__label-content--hoshi newsletter-message">Je laisse mon email</span>
+          </label>
+        </span>
+        <%= submit_tag "Inscription", class: "bt bt-rounded bt-primary" %>
+      <% end %>
+
+    </div>
+
+  </div>
+  <a href="#features">
+    <div class="web-mooc">
+      <div></div>
+    </div>
+  </a>
+</div>
+
+
+<div id='features' class="feature-container-primary feature">
+  <div class="container">
+
+    <div class="col-md-6 col-sm-12">
+      <%= image_tag "feature-1.png" %>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="content-padded">
+        <h1>Efficace</h1>
+        <p>Notre formule vous donne accès à un savoir orienté produit. Notre engagement: vous permettre de déployer de véritable application web. Fini les cours purement théoriques, place à l'action !</p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="feature-container-light feature">
+  <div class="container">
+    <div class="col-md-5 col-md-offset-1 col-sm-12">
+      <h1>Contenu</h1>
+      <p>Une formule riche en contenu, 100% en ligne, avec un accès illimité à un contenu riche et constamment en évolution riche. Accessible où vous voulez, quand vous voulez. J’ai plus les mots tellement c’est de la balle ce mooc.</p>
+    </div>
+    <div class="col-md-5 col-sm-12">
+      <div class="langages">
+        <%= image_tag "bootstrap.png", style: "position:relative; opacity: 0;" %>
+        <% languages.each_with_index do |language, index| %>
+          <%= image_tag "#{language}.png", "data-sr" => "wait #{( languages.size - index) * 0.6 }s and then hustle -20%" %>
+        <% end %>
+      </div>
+
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<div class="feature-container-light feature">
+  <div class="container">
+  <div class="col-md-5 col-md-offset-1  col-sm-12">
+    <%= render 'pages/evolution' %>
+  </div>
+    <div class="col-md-5 col-sm-12">
+      <h1>Evolution</h1>
+      <p>Une formule riche en contenu, 100% en ligne, avec un accès illimité à un contenu riche et constamment en évolution riche. Accessible où vous voulez, quand vous voulez. J’ai plus les mots tellement c’est de la balle ce mooc.</p>
+    </div>
+
+      <div class="clear"></div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class='container'>
+  <div class="col-md-7  ">
+    <h1>Soyez le premier à savoir </h1>
+
+    <%= form_tag(subscribe_path, id: "form-bottom", remote: true) do %>
+      <span class="input input--kyo">
+        <%= email_field_tag :email, nil, class: "input__field input__field--kyo", id: "input-19" %>
+        <label class="input__label input__label--kyo input__label--kyo-color-1" for="input-19">
+          <span class="input__label-content input__label-content--kyo newsletter-message">Je laisse mon email</span>
+        </label>
+      </span>
+      <%= submit_tag "Inscription", class: "bt bt-kyo bt-rounded bt-primary" %>
+    <% end %>
+
+
+  </div>
+  <div class="col-md-3 logo-container">
+    <div id="logo-footer">
+        <%= render 'pages/moon' %>
+    </div>
+  </div>
+  </div>
+</footer>
+
+
+<script>
+  window.sr = new scrollReveal();
+</script>
+
+<script>
+  (function() {
+    $( ".input__field--kyo" ).focus(function() {
+      $('#logo-footer').addClass('logo-footer-white')
+    });
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+      (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+          return this.replace(rtrim, '');
+        };
+      })();
+    }
+
+    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+      // in case the input is already filled..
+      if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+      }
+
+      // events:
+      inputEl.addEventListener( 'focus', onInputFocus );
+      inputEl.addEventListener( 'blur', onInputBlur );
+    } );
+
+    function onInputFocus( ev ) {
+      classie.add( ev.target.parentNode, 'input--filled' );
+    }
+
+    function onInputBlur( ev ) {
+      if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+      }
+    }
+  })();
+</script>
+

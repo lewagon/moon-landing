@@ -1,0 +1,75 @@
+.feature {
+  position: relative;
+  padding: 60px;
+}
+.feature-global-container{
+  width: 1200px;
+  margin: auto;
+}
+
+.feature-container-primary {
+  background: rgb(251, 251, 251);
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #F3F3F3;
+}
+.feature-container-light{
+  background: white;
+}
+
+.right {
+  float: right;
+  width: 500px;
+}
+
+.left {
+  float: left;
+}
+
+.content-padded {
+  padding-top: 44px;
+}
+
+.langages img {
+  width: 400px;
+  position: absolute;
+  z-index: 9;
+}
+.langages img:nth-child(1) {
+  top: 10px;
+  z-index: 8;
+}
+
+.langages img:nth-child(2) {
+  top: 20px;
+  z-index: 7;
+}
+
+.langages img:nth-child(3) {
+  top: 30px;
+  z-index: 6;
+}
+
+.langages img:nth-child(4) {
+  top: 40px;
+  z-index: 5;
+}
+
+.langages img:nth-child(5) {
+  top: 50px;
+  z-index: 4;
+}
+
+.langages img:nth-child(6) {
+  top: 60px;
+  z-index: 3;
+}
+
+.langages img:nth-child(7) {
+  top: 70px;
+  z-index: 2;
+}
+
+.langages img:nth-child(8) {
+  top: 80px;
+  z-index: 1;
+}

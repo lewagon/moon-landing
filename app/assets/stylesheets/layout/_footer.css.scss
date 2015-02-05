@@ -1,0 +1,37 @@
+// Your footer style
+
+footer {
+  background: rgb(241, 241, 241);
+  padding: 54px;
+
+  h1 {
+    padding-bottom: 25px;
+  }
+
+  #logo-footer {
+    margin: 116px auto;
+  }
+
+  svg {
+    width: 300px;
+    path, cirlcle, rect, .smile, .smile-action {
+      fill: lighten($black, 60%);
+    }
+  }
+}
+
+.logo-footer-white {
+  svg {
+    z-index: 100000;
+    position: relative;
+   path, cirlcle, rect, .smile, .smile-action {
+    fill: white;
+   }
+  }
+}
+
+.h1-onfocus {
+  position: relative;
+  color: white;
+  z-index: 100000;
+}
