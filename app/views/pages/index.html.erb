@@ -19,7 +19,7 @@
       </h1>
 
 
-      <%= form_tag(subscribe_path, id: "form-top", remote: true) do %>
+      <%= form_tag(subscribe_path, id: "form-top", remote: true, method: :post) do %>
         <span class="input input--hoshi">
           <%= email_field_tag :email, nil, class: "input__field input__field--hoshi", id: "input-4", autocomplete: :off %>
           <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
@@ -97,7 +97,7 @@
   <div class="col-md-7  ">
     <h1>Soyez le premier à savoir </h1>
 
-    <%= form_tag(subscribe_path, id: "form-bottom", remote: true) do %>
+    <%= form_tag(subscribe_path, id: "form-bottom", remote: true, method: :post) do %>
       <span class="input input--kyo">
         <%= email_field_tag :email, nil, class: "input__field input__field--kyo", id: "input-19" %>
         <label class="input__label input__label--kyo input__label--kyo-color-1" for="input-19">

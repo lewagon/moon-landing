@@ -17,8 +17,11 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'high_voltage', '~> 2.2.1'
 gem 'gibbon'
 gem "figaro"
+gem 'quiet_assets'
 
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "pry-rails"
+  gem "pry-byebug"
 end

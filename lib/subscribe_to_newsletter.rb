@@ -8,10 +8,10 @@ class SubscribeToNewsletter
     @gibbon.lists.subscribe({
       id: @list_id,
       email: { email: params[:email] },
-      merge_vars: {
-        FNAME: params[:first_name],
-        LNAME: params[:last_name]
-      },
+      # merge_vars: {
+      #   FNAME: params[:first_name],
+      #   LNAME: params[:last_name]
+      # },
       double_optin: false
     })
   end
